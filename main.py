@@ -322,7 +322,7 @@ async def handle_message(m: Message):
                 id=[int(fileid)],
                 to_peer=m.chat.id,
                 drop_author=True,
-                # noforwards=True, #Uncomment it if you dont want to forward the media.
+                # noforwards=False, #Uncomment it if you dont want to forward the media.
                 background=True,
                 drop_media_captions=False,
                 with_my_score=True,
@@ -407,7 +407,7 @@ async def handle_message(m: Message):
 File Name: `{data['file_name']}`
 Size: **{data["size"]}**
 
-@DextiNBots
+@XBOTSHUB
 """,
             supports_streaming=True,
             spoiler=True,
@@ -430,7 +430,7 @@ Size: **{data["size"]}**
 File Name: `{data['file_name']}`
 Size: **{data["size"]}**
 
-@DextiNBots
+@XBOTSHUB
 """,
             progress_callback=progress_bar,
             thumb=thumbnail if thumbnail else None,
