@@ -255,7 +255,7 @@ Available commands:
             [
                 Button.url("Updates", "https://t.me/XBOTSHUB_OFFICIAL"),
                 Button.url(
-                    "Repo", "https://github.com/TheDextiN/Terabox-Downloader-Bot"
+                    "Repo", "private🥸"
                 ),
             ]
         ],
@@ -302,7 +302,7 @@ async def handle_message(m: Message):
         return await m.reply("You are spamming. Please wait a 1 minute and try again.")
     hm = await m.reply("Sending you the media wait...")
     count = db.get(f"check_{m.sender_id}")
-    if count and int(count) > 15:
+    if count and int(count) > 200:
         return await hm.edit(
             "You are limited now. Please come back after 2 hours or use another account."
         )
@@ -328,7 +328,7 @@ async def handle_message(m: Message):
                 with_my_score=True,
             )
         )
-        db.set(m.sender_id, time.monotonic(), ex=60)
+        db.set(m.sender_id, time.monotonic(), ex=5)
         db.set(
             f"check_{m.sender_id}",
             int(count) + 1 if count else 1,
