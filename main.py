@@ -245,7 +245,7 @@ Available commands:
 /start - Start using the bot.
 /help - Show this help message.
 
-@DextiNBots
+@XBOTSHUB_OFFICIAL
 """
     link_preview = (False,)
     await m.reply(
@@ -407,7 +407,7 @@ async def handle_message(m: Message):
 File Name: `{data['file_name']}`
 Size: **{data["size"]}**
 
-@XBOTSHUB
+@XBOTSHUB_OFFICIAL
 """,
             supports_streaming=True,
             spoiler=True,
@@ -430,7 +430,7 @@ Size: **{data["size"]}**
 File Name: `{data['file_name']}`
 Size: **{data["size"]}**
 
-@XBOTSHUB
+@XBOTSHUB_OFFICIAL
 """,
             progress_callback=progress_bar,
             thumb=thumbnail if thumbnail else None,
